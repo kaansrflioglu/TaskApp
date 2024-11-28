@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Container } from "react-bootstrap";
 import TaskList from "./TaskList";
 import TaskCreationForm from "./TaskCreationForm";
-import TaskEditForm from "./TaskEditForm";
+import TaskEditModal from "./TaskEditModal";
 
 function TaskManager() {
   const [tasks, setTasks] = useState([]);
@@ -42,15 +43,30 @@ function TaskManager() {
       .catch((error) => toast.error(`Failed to update task: ${error.message}`));
   };
 
+  const handleDeleteTask = (taskId) => {
+    axios
+      .delete(`http://localhost:5000/api/Task/${taskId}`)
+      .then(() => {
+        toast.success("Task deleted successfully!");
+        fetchTasks();
+      })
+      .catch((error) => toast.error(`Failed to delete task: ${error.message}`));
+  };
+
   return (
-    <div>
+    <Container>
       <ToastContainer />
       <TaskCreationForm onCreate={handleCreateTask} />
-      <TaskList tasks={tasks} onEdit={setEditTask} />
+      <TaskList tasks={tasks} onEdit={setEditTask} onDelete={handleDeleteTask} />
       {editTask && (
-        <TaskEditForm task={editTask} onSave={handleEditTask} onCancel={() => setEditTask(null)} />
+        <TaskEditModal
+          task={editTask}
+          show={!!editTask}
+          onSave={handleEditTask}
+          onHide={() => setEditTask(null)}
+        />
       )}
-    </div>
+    </Container>
   );
 }
 

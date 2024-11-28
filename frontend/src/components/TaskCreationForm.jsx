@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Form, Button } from "react-bootstrap";
 
 function TaskCreationForm({ onCreate }) {
   const [title, setTitle] = useState("");
@@ -9,35 +10,40 @@ function TaskCreationForm({ onCreate }) {
     const newTask = {
       title,
       description,
-      createdAt: new Date().toISOString(), 
+      createdAt: new Date().toISOString(),
     };
     onCreate(newTask);
     setTitle("");
     setDescription("");
   };
-  
 
   return (
-    <form onSubmit={handleSubmit} className="task-creation-form">
-      <h2>Create a Task</h2>
-      <div>
-        <label>Title:</label>
-        <input
+    <Form onSubmit={handleSubmit} className="mb-4">
+      <h3>Create a Task</h3>
+      <Form.Group className="mb-3">
+        <Form.Label>Title</Form.Label>
+        <Form.Control
           type="text"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           required
+          placeholder="Enter task title"
         />
-      </div>
-      <div>
-        <label>Description:</label>
-        <textarea
+      </Form.Group>
+      <Form.Group className="mb-3">
+        <Form.Label>Description</Form.Label>
+        <Form.Control
+          as="textarea"
+          rows={3}
           value={description}
           onChange={(e) => setDescription(e.target.value)}
+          placeholder="Enter task description"
         />
-      </div>
-      <button type="submit">Create Task</button>
-    </form>
+      </Form.Group>
+      <Button variant="primary" type="submit">
+        Create Task
+      </Button>
+    </Form>
   );
 }
 

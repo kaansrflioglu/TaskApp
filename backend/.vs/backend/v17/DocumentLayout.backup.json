@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\balos\\Desktop\\TaskApp\\backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B7E73325-8A97-4FBD-88EC-CDD069CDFDC6}|backend\\backend.csproj|c:\\users\\balos\\desktop\\taskapp\\backend\\backend\\models\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7E73325-8A97-4FBD-88EC-CDD069CDFDC6}|backend\\backend.csproj|solutionrelative:backend\\models\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7E73325-8A97-4FBD-88EC-CDD069CDFDC6}|backend\\backend.csproj|c:\\users\\balos\\desktop\\taskapp\\backend\\backend\\migrations\\20241128155939_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7E73325-8A97-4FBD-88EC-CDD069CDFDC6}|backend\\backend.csproj|solutionrelative:backend\\migrations\\20241128155939_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7E73325-8A97-4FBD-88EC-CDD069CDFDC6}|backend\\backend.csproj|c:\\users\\balos\\desktop\\taskapp\\backend\\backend\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7E73325-8A97-4FBD-88EC-CDD069CDFDC6}|backend\\backend.csproj|solutionrelative:backend\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7E73325-8A97-4FBD-88EC-CDD069CDFDC6}|backend\\backend.csproj|c:\\users\\balos\\desktop\\taskapp\\backend\\backend\\data\\taskcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7E73325-8A97-4FBD-88EC-CDD069CDFDC6}|backend\\backend.csproj|solutionrelative:backend\\data\\taskcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "20241128155939_initial.cs",
+              "DocumentMoniker": "C:\\Users\\balos\\Desktop\\TaskApp\\backend\\backend\\Migrations\\20241128155939_initial.cs",
+              "RelativeDocumentMoniker": "backend\\Migrations\\20241128155939_initial.cs",
+              "ToolTip": "C:\\Users\\balos\\Desktop\\TaskApp\\backend\\backend\\Migrations\\20241128155939_initial.cs",
+              "RelativeToolTip": "backend\\Migrations\\20241128155939_initial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T16:04:26.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TaskController.cs",
+              "DocumentMoniker": "C:\\Users\\balos\\Desktop\\TaskApp\\backend\\backend\\Controllers\\TaskController.cs",
+              "RelativeDocumentMoniker": "backend\\Controllers\\TaskController.cs",
+              "ToolTip": "C:\\Users\\balos\\Desktop\\TaskApp\\backend\\backend\\Controllers\\TaskController.cs",
+              "RelativeToolTip": "backend\\Controllers\\TaskController.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAmwHQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T16:01:31.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TaskContext.cs",
+              "DocumentMoniker": "C:\\Users\\balos\\Desktop\\TaskApp\\backend\\backend\\Data\\TaskContext.cs",
+              "RelativeDocumentMoniker": "backend\\Data\\TaskContext.cs",
+              "ToolTip": "C:\\Users\\balos\\Desktop\\TaskApp\\backend\\backend\\Data\\TaskContext.cs",
+              "RelativeToolTip": "backend\\Data\\TaskContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T15:56:14.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Task.cs",
+              "DocumentMoniker": "C:\\Users\\balos\\Desktop\\TaskApp\\backend\\backend\\Models\\Task.cs",
+              "RelativeDocumentMoniker": "backend\\Models\\Task.cs",
+              "ToolTip": "C:\\Users\\balos\\Desktop\\TaskApp\\backend\\backend\\Models\\Task.cs",
+              "RelativeToolTip": "backend\\Models\\Task.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T15:51:54.174Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -9,10 +9,10 @@ Bu proje, görev yönetimi için geliştirilmiş bir tam yığın web uygulamas�
 
 -   **Frontend**: React
 -   **Backend**: ASP.NET Core
--   **Veritabanı**: SQL Server 
+-   **Veritabanı**: SQL Server
 -   **ORM**: Entity Framework Core
+-   **Test Framework**: xUnit
 -   **Paket Yöneticisi**: npm (frontend için)
-
 
 ----------
 
@@ -28,38 +28,25 @@ Bu web uygulaması, kullanıcıların görevlerini yönetmelerini sağlar. Göre
 -   **Gerçek Zamanlı Güncelleme**: Görev listesi, ekleme veya düzenleme işlemleri sonrası dinamik olarak güncellenir.
 -   **Hata Yönetimi**: Görev ekleme veya düzenleme gibi işlemler sonrası başarı veya hata mesajları gösterilir.
 
+----------
+
 ## Kurulum Talimatları
 
 ### Backend Kurulumu (ASP.NET Core)
 
 #### Gereksinimler
 
--   [.NET SDK](https://dotnet.microsoft.com/download) yükleyin.  
-    Kurulum doğrulaması için:
-    
-    `dotnet --version` 
-    
--   SQL Server yükleyin ve yapılandırın.
-    
+-   [.NET SDK](https://dotnet.microsoft.com/download)
+-   SQL Server
 
 #### Backend Çalıştırma Adımları
 
-1.  Proje dosyalarını klonlayın ve backend dizinine gidin ve bağımlılıkları yükleyin:
-     
-    `dotnet restore` 
-    
-2.  `appsettings.json` dosyasındaki bağlantı dizesini (connection string) SQL Server için uygun şekilde düzenleyin.
-    
-3.  Veritabanını oluşturmak için migration işlemini uygulayın:
-  
-    `dotnet ef database update` 
-    
-4.  Uygulamayı çalıştırın:
-       
-    `dotnet run` 
-    
-    Backend, `http://localhost:5000` adresinde (veya yapılandırmada belirtilen portta) çalışacaktır.
-    
+1.  Proje dosyalarını klonlayın ve backend dizinine gidin.
+2.  `appsettings.json` dosyasındaki bağlantı dizesini düzenleyerek SQL Server yapılandırmasını yapın.
+3.  Veritabanını oluşturmak için migration işlemini uygulayın:  
+    `dotnet ef database update`
+4.  Backend API'sini çalıştırın:  
+    `dotnet run`
 
 #### API Endpoints (Servisler)
 
@@ -68,23 +55,36 @@ Bu web uygulaması, kullanıcıların görevlerini yönetmelerini sağlar. Göre
 -   `GET /api/tasks/{id}`: Belirli bir görevi ID ile getirme.
 -   `PUT /api/tasks/{id}`: Mevcut bir görevi düzenleme.
 
+----------
+
 ### Frontend Kurulumu (React)
 
 #### Gereksinimler
 
--   [Node.js](https://nodejs.org/) yükleyin.  
-    Kurulum doğrulaması için:
-    `node -v` 
-    `npm -v` 
+-   [Node.js](https://nodejs.org/)
 
 #### Frontend Çalıştırma Adımları
 
-1.  Frontend dizinine gidin ve gerekli bağımlılıkları yükleyin:
-     
-    `npm install` 
-       
-2.  React uygulamasını başlatın:
-        
-    `npm start` 
-    
-    Frontend, `http://localhost:3000` adresinde çalışacaktır.
+1.  Proje dosyalarını klonlayın ve frontend dizinine gidin.
+2.  Gerekli bağımlılıkları yüklemek için:  
+    `npm install`
+3.  React uygulamasını başlatın:  
+    `npm start`
+----------
+
+## Testler
+
+Bu proje, backend tarafında CRUD işlemleri için xUnit tabanlı bir test altyapısına sahiptir. Testler, uygulamanın temel API işlevlerinin doğru çalıştığını doğrular.
+
+#### Test Edilen İşlevler
+
+-   **Görev Listeleme**: Tüm görevlerin başarıyla listelendiğini doğrular.
+-   **Görev Ekleme**: Geçerli verilerle yeni görev ekleme işlemini test eder.
+-   **Görev Getirme**: Belirli bir görevi ID ile getirme işlemini doğrular.
+-   **Görev Güncelleme**: Mevcut bir görevin başarılı bir şekilde güncellendiğini doğrular.
+-   **Hata Yönetimi**: Geçersiz verilerle yapılan işlemler sonrası beklenen hata mesajlarının döndüğünü test eder.
+
+#### Testlerin Çalıştırılması
+
+Testleri çalıştırmak için backend dizininde aşağıdaki komutu kullanın:  
+    `dotnet test`
